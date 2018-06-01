@@ -17,6 +17,7 @@ export default (state = defaultUsers, action) => {
             }
 
         case GET_USER + SUCCESS:
+            console.log('success user')
             return {
                 ...state,
                 users: state.users.concat(action.data),

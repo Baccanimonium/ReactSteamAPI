@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import logo from '../public/img/2000px-Steam_icon_logo.svg.png'
-import {H3} from "./UI/headers"
-
+import {H2} from "./UI/headers"
 import {NavLink} from 'react-router-dom'
+
+
 const Header = () => {
 
     return (
@@ -36,7 +37,6 @@ const HeaderWrapper =styled.header`
 `
 const HeaderContentSpacer = styled.div`
     width: 405px;
-    color: rgb(225, 159, 11,1);
     font-size: 24px;
     padding-bottom: 25px;
 `
@@ -44,11 +44,6 @@ const LogoSpacer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-`
-const H2= styled.h2`
-    font-size: 30px;
-    margin-bottom: 18px;
-    color: #fff;
 `
 const LogoImgSpacer =styled.img`
     width: auto;

@@ -23,3 +23,13 @@ export const ModalTitle = styled.div`
   font-weight: 700;
   color: #ffffff;
 `
+export const ErrorsBar= styled.div`
+text-align: center;
+color: #551300;
+padding: 15px;
+font-size: 18px;
+  span{
+  color: #fff;
+  font-size: 12px;
+  }
+`

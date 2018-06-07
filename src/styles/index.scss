@@ -1,0 +1,96 @@
+$color-gold:#e19f0b;
+$color-murky-gold:rgba(225,159,11,0.6);
+$color-white: #eaeaea;
+//common styles start
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: rgb(37, 40, 47);
+}
+
+input[type="text"]::-webkit-input-placeholder {
+  color: $color-white;
+}
+input[type="text"]:-moz-placeholder {/*Firefox 18-*/
+  color: $color-white;
+}
+input[type="text"]::-moz-placeholder { /*Firefox 19+*/
+  color: $color-white;
+}
+input[type="text"]:-ms-input-placeholder {
+  color: $color-white;
+}
+//common styles end
+
+//user section styles start
+
+.main-content-block{
+  min-width: 600px;
+  min-height: 580px;
+  margin: 75px 0;
+  transition: width 2s, height 2s, background-color 2s ease-out;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  align-items:center;
+  background: transparent;
+}
+.main-content-block.active{
+  background-color: black;
+  border: 1px solid $color-gold;
+  box-shadow: 16px 15px 55px -35px $color-gold;
+}
+
+.user-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: black;
+  padding: 33px 50px 50px;
+  transition: all 0.5s linear;
+}
+.user-form.border{
+  border: 1px solid $color-gold;
+  box-shadow: 3px 7px 59px -30px $color-gold;
+}
+
+.inactive-button{color: #000;
+  background-color: grey;
+  border-radius: 0 50px 50px 0;
+  border-color: transparent;
+
+  transition:all 0.3s ease;
+  cursor: not-allowed;
+}
+
+.inactive-button.active{
+  background-color: $color-murky-gold;
+  color: $color-white;
+  cursor: pointer;
+}
+.inactive-button.active:hover{
+  box-shadow: 2px 3px 12px -3px $color-murky-gold;
+}
+
+a.current{
+  color:$color-murky-gold;
+}
+//user section styles end
+
+//games section styles start
+.games-section-wrapper{
+  min-width: 950px;
+  min-height: 900px;
+  margin: 75px 0;
+  transition: all 1000ms ease;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  align-items:center;
+  background-color: black;
+  border: 1px solid $color-gold;
+  box-shadow: 16px 15px 55px -35px $color-gold;
+}
+
+//games section styles end

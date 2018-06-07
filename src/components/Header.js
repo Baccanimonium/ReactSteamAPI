@@ -37,7 +37,7 @@ const HeaderWrapper =styled.header`
 `
 const HeaderContentSpacer = styled.div`
     width: 405px;
-    font-size: 24px;
+    font-size: 18px;
     padding-bottom: 25px;
 `
 const LogoSpacer = styled.div`

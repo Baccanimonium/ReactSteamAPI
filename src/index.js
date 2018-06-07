@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './styles/index.css';
+import './styles/transitionStyle.css';
+import './styles/loader.css';
+import './styles/select.css';
 import App from './components/App';
 import store from './store/index'
 import { Provider } from 'react-redux';

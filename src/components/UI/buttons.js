@@ -8,6 +8,7 @@ export const EmptyBatton = styled.button`
     font-weight:700;
     color: #e19f0b;
     background: transparent;
+    cursor:pointer;
 `
 export const MiniButton = styled.button`
     align-self: center;
@@ -17,4 +18,5 @@ export const MiniButton = styled.button`
     background-color: transparent;
     padding: 4px 8px;
     color: #e19f0b;
+    cursor:pointer;
 `

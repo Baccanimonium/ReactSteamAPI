@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components'
-import {ContactItem} from "../UI/grids"
-import {TitleItem} from "../UI/headers"
-import {formatDate} from "../../helpers/formatDate"
+import {ContactItem} from "../../UI/grids"
+import {TitleItem} from "../../UI/headers"
+import {formatDate} from "../../../helpers/formatDate"
 const AchievementsSlide = ({data}) => {
     const AchievedStatus = styled.span`
     color:${data.achieved? `green`: `red`};

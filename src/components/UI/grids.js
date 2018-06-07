@@ -10,6 +10,7 @@ export const GridDiv = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 10px;
   grid-row-gap: 10px;
+  min-width:950px;
 `
 export const ContactItemBlock = styled.div`
   display:flex;

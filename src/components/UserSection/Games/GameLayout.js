@@ -1,7 +1,8 @@
-import React from 'react';
-import {FlexedDiv,ContactItem, ContactItemBlock} from "../UI/grids"
-import {TitleItem} from "../UI/headers"
-import {MiniButton} from "../UI/buttons"
+import React from 'react'
+import PropTypes from 'prop-types'
+import {FlexedDiv,ContactItem, ContactItemBlock} from "../../UI/grids"
+import {TitleItem} from "../../UI/headers"
+import {MiniButton} from "../../UI/buttons"
 
 const GameLayout = (data) => {
     const {name,appid,playtime_forever,img_logo_url}=data.data
@@ -29,3 +30,8 @@ const CentredFlexedDiv = FlexedDiv.extend`
 const ContactItemBlockMrTop = ContactItemBlock.extend`
   margin: 15px 0;
 `
+
+GameLayout.propTypes = {
+    PopUpModalWindow: PropTypes.func,
+    data:PropTypes.object
+}

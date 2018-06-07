@@ -1,15 +1,14 @@
-import {GET_USER,GET_USER_OWN_GAMES,START,SUCCESS,FAIL} from "../helpers/constants"
+import {GET_USER,START,SUCCESS,FAIL,LOADED} from "../helpers/constants"
 
 
 const defaultUsers = {
     loading: false,
     users: [],
-    games:[]
+    error:null
 }
 
 
 export default (state = defaultUsers, action) => {
-    const payload = action.payload
     switch (action.type) {
         case GET_USER + START:
             return {
@@ -25,18 +24,15 @@ export default (state = defaultUsers, action) => {
                 error: null
             }
         case GET_USER + FAIL:
-            console.log('fail user')
             return {
                 ...state,
                 loading: false,
-                error: payload
+                error: 'No users found, enter another user id'
             }
-        case GET_USER_OWN_GAMES + SUCCESS:
+        case GET_USER + LOADED:
             return {
                 ...state,
                 loading: false,
-                games: state.games.concat(action.response.games),
-                gamesCount: action.response.game_count,
             }
 
         default:

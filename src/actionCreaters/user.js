@@ -1,19 +1,7 @@
-import {GET_USER,GET_USER_OWN_GAMES, START} from "../helpers/constants"
+import {GET_USER, START} from "../helpers/constants"
 
 
-// export function getUser(){
-//     return (dispatch, getState) => {
-//         const {user} = getState()
-//         if (user.loading) return
-//         //
-//         dispatch({
-//             type: GET_USER + START,
-//         })
-//     }
-// }
-export const getUser =() =>({
+export const getUser =(userID) =>({
             type: GET_USER + START,
-         })
-export const getUserOwnGames =() =>({
-            type: GET_USER_OWN_GAMES + START,
+            payload:userID
          })

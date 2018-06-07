@@ -8,13 +8,15 @@ export default (OriginalComponent) => class Carousel extends Component {
             noTransition: false,
         }
 
-
+// require slides length
     nextSlide(slidesLength){
+            //prevent over count click
         if (!this.state.slidingAnimationEnd){
             return
         }this.setState({
             slidingAnimationEnd: false
         })
+        // if not the last slide
 
         if(this.state.position < (slidesLength )){
             this.setState((prevState) => {
@@ -23,6 +25,7 @@ export default (OriginalComponent) => class Carousel extends Component {
                 }
             })
         }
+        // if the last slide
         if(this.state.position >= (slidesLength -1 )) {
             setTimeout(() => {this.setState({
                     noTransition: true,
@@ -30,12 +33,15 @@ export default (OriginalComponent) => class Carousel extends Component {
                 })}, 1000)
 
         }
+        //unlock button
         this.setState({
             slidingAnimationEnd: true,
             noTransition: false
         })
     }
+    // require slides length
     prevSlide(slidesLength){
+        //prevent over count click
         if (!this.state.slidingAnimationEnd){
             return
         }
@@ -45,6 +51,7 @@ export default (OriginalComponent) => class Carousel extends Component {
                 position: prevState.position -1
             }
         })
+        // if  the first slide
         if (this.state.position <= 0){
             this.setState({
                 noTransition: true,
@@ -58,6 +65,7 @@ export default (OriginalComponent) => class Carousel extends Component {
                 })
             }, 50)
         }
+        //unlock button
         this.setState({
             slidingAnimationEnd: true,
         })

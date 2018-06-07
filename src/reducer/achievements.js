@@ -1,35 +1,41 @@
-import {GET_USER_GAME_ACHIEVEMENTS,START,SUCCESS,FAIL} from "../helpers/constants"
+import {GET_USER_GAME_ACHIEVEMENTS,START,SUCCESS,FAIL,LOADED} from "../helpers/constants"
 
 
 const defaultAchievements = {
     loading: false,
-    achievements: []
+    achievements: [],
+    error:null
 
 }
 
 
 export default (state = defaultAchievements, action) => {
-    const payload = action.payload
     switch (action.type) {
         case GET_USER_GAME_ACHIEVEMENTS + START:
             return {
                 ...state,
-                loading: true
+                loading: true,
+                error: null
             }
 
         case GET_USER_GAME_ACHIEVEMENTS + SUCCESS:
             return {
                 ...state,
-                achievements: state.achievements.concat(action.playerstats.achievements),
+                achievements: state.achievements.concat(action.playerstats),
                 loading: false,
                 error: null
             }
         case GET_USER_GAME_ACHIEVEMENTS + FAIL:
-            console.log('fail ach')
             return {
                 ...state,
                 loading: false,
-                error: payload
+                error: action.playerstats.error
+            }
+        case GET_USER_GAME_ACHIEVEMENTS + LOADED:
+            return {
+                ...state,
+                loading: false,
+                error:null
             }
         default:
             return state

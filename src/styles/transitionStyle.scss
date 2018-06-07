@@ -1,0 +1,92 @@
+$fast-transition:300ms;
+$medium-transition:500ms;
+
+/*transition group animation start*/
+/*fade animation start*/
+.fade-enter {
+  opacity: 0.01;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity $medium-transition ease-in;
+}
+.fade-appear {
+  opacity: 0.01;
+}
+.fade-appear-active {
+  opacity: 1;
+  transition: opacity $medium-transition ease-in;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity $medium-transition ease-in;
+}
+/*fade animation end*/
+
+/*flip animation start*/
+.flip-enter {
+  transform: translateX(-100%);
+}
+.flip-enter-active {
+  animation: slide-in $fast-transition ease-out forwards;
+}
+.flip-appear {
+  transform: translateX(-100%);
+}
+.flip-appear-active {
+  animation: slide-in $fast-transition ease-out forwards;
+}
+.flip-exit {
+  transform: translateX(0%);
+}
+.flip-exit-active {
+  animation: slide-out 300ms ease-out forwards;
+}
+@keyframes slide-in {
+  from{
+    transform: translateX(-100%);
+  }
+  to{
+    transform: translateX(0%);
+  }
+}
+@keyframes slide-out {
+  from{
+    transform: translateX(0%);
+  }
+  to{
+    transform: translateX(100%);
+  }
+}
+/*flip animation end*/
+
+/*fetching form start*/
+.fetchingForm-enter {
+
+}
+.fetchingForm-enter-active {
+
+  animation: swingInX $medium-transition ease-out forwards;
+}
+.fetchingForm-exit {
+
+}
+.fetchingForm-exit-active {
+
+  animation: swingOutX $medium-transition ease-out forwards;
+}
+@keyframes swingInX {
+  0% {
+    transform: perspective(400px) rotateX(-90deg); }
+  100% {
+    transform: perspective(400px) rotateX(0deg); } }
+@keyframes swingOutX {
+  0% {
+    transform: perspective(400px) rotateX(0deg); }
+  100% {
+    transform: perspective(400px) rotateX(-90deg); } }
+/*fetchingform end*/
+/*transition group animation end*/

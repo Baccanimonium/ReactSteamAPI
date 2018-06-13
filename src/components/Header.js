@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import logo from '../public/img/2000px-Steam_icon_logo.svg.png'
 import {H2} from "./UI/headers"
 import {NavLink} from 'react-router-dom'
 
@@ -14,7 +13,7 @@ const Header = () => {
                     <LogoSpacer>
                         <H2>Powered by</H2>
                         <NavLink to="/">
-                            <LogoImgSpacer src={logo}/>
+                            <LogoImgSpacer src="/server/dist/2000px-Steam_icon_logo.svg.png"/>
                         </NavLink>
                     </LogoSpacer>
                     Retrieve data about the steam user of interest to you

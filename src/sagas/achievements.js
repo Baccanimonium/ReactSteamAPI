@@ -12,7 +12,7 @@ export function* watcherAchievementsSaga() {
 function fetchUserGameAchievements(userId) {
     return axios({
         method: "get",
-        url: `/get_player_game_achievements/${userId}/${localStorage.getItem(`gameID`)}`
+        url: `/api/get_player_game_achievements/${userId}/${localStorage.getItem(`gameID`)}`
     }).then(response => response.data)
 
 }

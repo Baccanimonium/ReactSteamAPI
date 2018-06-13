@@ -8,7 +8,7 @@ export default (OriginalComponent) => class Carousel extends Component {
             noTransition: false,
         }
 
-// require slides length
+// require slides length, passed by argument in originalComponent. slidesLength = number of components in original component
     nextSlide(slidesLength){
             //prevent over count click
         if (!this.state.slidingAnimationEnd){
@@ -39,7 +39,7 @@ export default (OriginalComponent) => class Carousel extends Component {
             noTransition: false
         })
     }
-    // require slides length
+    //require slides length, passed by argument in originalComponent. slidesLength = number of components in original component
     prevSlide(slidesLength){
         //prevent over count click
         if (!this.state.slidingAnimationEnd){

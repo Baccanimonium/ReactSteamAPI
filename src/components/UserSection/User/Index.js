@@ -9,7 +9,7 @@ import { CSSTransition } from 'react-transition-group'
 
 class UserSection extends Component {
     state = {
-        currentUserData: ''
+        currentUserData: false
     }
     static getDerivedStateFromProps(nextProps, prevState){
         // check for matches in state

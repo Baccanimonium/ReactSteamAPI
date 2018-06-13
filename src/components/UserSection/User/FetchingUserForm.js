@@ -49,6 +49,7 @@ class FetchingUserForm extends Component {
                 [type]: value
             })
     }
+
     // re open form
     handleOpenForm =()=>{
         this.setState({

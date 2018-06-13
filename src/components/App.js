@@ -3,7 +3,6 @@ import Header from './Header'
 import {Router} from 'react-router-dom'
 import history from '../history'
 import styled from 'styled-components'
-import background from '../public/img/counter-strike-global-offensive-uhd-4k-wallpaper.jpg'
 import Footer from './Footer'
 import AppRoutes from './AppRoutes'
 
@@ -59,7 +58,7 @@ const ContentWrapper =styled.div`
 const AppWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    background: url(${background}) no-repeat center;
+    background: url("/server/dist/counter-strike-global-offensive-uhd-4k-wallpaper.jpg")  center;
     background-size: 100%;
     color: #fff;
     font-size: 14px; 

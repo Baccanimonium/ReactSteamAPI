@@ -12,7 +12,7 @@ export function* watcherGamesSaga() {
 function fetchUserOwnGames(userId) {
     return axios({
         method: "get",
-        url: `/get_player_owned_games/${userId}`
+        url: `/api/get_player_owned_games/${userId}`
     }).then(response => response.data);
 
 }

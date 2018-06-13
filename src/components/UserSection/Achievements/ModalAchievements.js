@@ -98,9 +98,11 @@ class ModalAchievements extends Component {
                                             ))}
                                         </SliderWrapper>
                                         <ArrowWrapper>
+                                            {/*use function from HOC, pass the number of slides*/}
                                             <SvgArrowLeft onClick={(e) => prevSlide(achievementsLength,e)}>
                                                 <use xlinkHref="#arrow-left" ></use>
                                             </SvgArrowLeft>
+                                            {/*use function from HOC, pass the number of slides*/}
                                             <SvgArrowRight onClick={(e) => nextSlide(achievementsLength,e)}>
                                                 <use xlinkHref="#arrow-right" ></use>
                                             </SvgArrowRight>

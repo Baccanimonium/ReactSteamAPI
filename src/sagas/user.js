@@ -13,7 +13,7 @@ export function* watcherUserSaga() {
 function fetchUser(userId) {
     return axios({
         method: "get",
-        url: `/get_user/${userId}`
+        url: `/api/get_user/${userId}`
     }).then(response => response.data);
 
 }
